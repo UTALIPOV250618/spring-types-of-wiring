@@ -10,11 +10,17 @@ public class KoscheiTheDeathless {
     private Ocean1 ocean;
 
     public String getRulesByDeth() {
-        return "На свете есть океан , " + ocean.toString();
+        return  ocean.toString();
     }
 
     @Autowired
-    public void setOcean(Ocean1 ocean) {
+    public KoscheiTheDeathless(Ocean1 ocean){
+        this.ocean = ocean;
+    }
+    public Ocean1 getOcean(){
+        return this.ocean;
+    }
+    public void  setOcean(Ocean1 ocean){
         this.ocean = ocean;
     }
 }
